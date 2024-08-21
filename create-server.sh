@@ -19,6 +19,7 @@ build_server() {
     wget https://cdn.modrinth.com/data/gvQqBUqZ/versions/5szYtenV/lithium-fabric-mc1.21.1-0.13.0.jar
     wget https://cdn.modrinth.com/data/Ps1zyz6x/versions/yGBzVpiV/ScalableLux-0.1.0%2Brc.1%2Bfabric.43c9882-all.jar
     wget https://cdn.modrinth.com/data/aZj58GfX/versions/8ZQEgc1i/easyauth-mc1.21-3.0.25.jar
+    wget https://cdn.modrinth.com/data/LODybUe5/versions/4ndHE533/easywhitelist-mc1.20-rc1-1.0.1.jar
     cd ..
 
     # first run server
@@ -99,7 +100,7 @@ sync-chunk-writes=true
 text-filtering-config=
 use-native-transport=true
 view-distance=32
-white-list=false
+white-list=true
 "
 }
 
