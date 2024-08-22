@@ -112,6 +112,11 @@ run_server() {
     java -Xmx2G -jar fabric-server-mc.1.21.1-loader.0.16.2-launcher.1.0.1.jar nogui
 }
 
+make_backup() {
+    mkdir backup
+    tar  --exclude ./backup -czvf ./backup/backup-$(date +%Y%m%d%H%M%S).tar.gz ./**
+}
+
 case $1 in
 
   build)
@@ -127,6 +132,10 @@ case $1 in
 
   help|-h|--help)
     print_help
+    ;;
+
+  backup)
+    make_backup
     ;;
 
   *)
