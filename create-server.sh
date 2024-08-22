@@ -13,7 +13,7 @@ build_server() {
     mkdir -p .fabric/server/
     wget https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa98dc05c/server.jar -O .fabric/server/1.21.1-server.jar
 
-    # mkdir mods
+    mkdir mods
     cd mods
     wget https://cdn.modrinth.com/data/P7dR8mSH/versions/bK6OgzFj/fabric-api-0.102.1%2B1.21.1.jar
     wget https://cdn.modrinth.com/data/gvQqBUqZ/versions/5szYtenV/lithium-fabric-mc1.21.1-0.13.0.jar
@@ -114,7 +114,7 @@ run_server() {
 
 make_backup() {
     mkdir backup
-    tar  --exclude ./backup --exclude ./.git -czvf ./backup/backup-$(date +%Y%m%d%H%M%S).tar.gz ./**
+    tar  --exclude ./backup -czvf ./backup/backup-$(date +%Y%m%d%H%M%S).tar.gz ./**
 }
 
 case $1 in
