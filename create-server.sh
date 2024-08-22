@@ -114,7 +114,7 @@ run_server() {
 
 make_backup() {
     mkdir backup
-    tar  --exclude ./backup -czvf ./backup/backup-$(date +%Y%m%d%H%M%S).tar.gz ./**
+    tar  --exclude ./backup --exclude ./.git -czvf ./backup/backup-$(date +%Y%m%d%H%M%S).tar.gz ./**
 }
 
 case $1 in
